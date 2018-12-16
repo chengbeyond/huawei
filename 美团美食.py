@@ -8,7 +8,7 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 """美团火锅店抓取"""
 
 
-class ProxySpider(object):
+class MeiTuanSpider(object):
     def __init__(self):
         self.url = "http://meishi.meituan.com/i/api/channel/deal/list"
         self.headers = {
@@ -74,5 +74,5 @@ class ProxySpider(object):
 
 
 if __name__ == "__main__":
-    ps = ProxySpider()
+    ps = MeiTuanSpider()
     ps.run()
