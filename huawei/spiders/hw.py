@@ -10,9 +10,11 @@ class HwSpider(scrapy.Spider):
     start_urls = ['https://www.vmall.com']
 
     def parse(self, response):
-        phone_type = response.xpath("//li[@id='zxnav_0']//ul/li")[1:9]
+        # phone_type = response.xpath("//li[@id='zxnav_0']//ul/li")[1:-1]
+        phone_type = response.xpath("//ol[@class='category-list']/li/div[2]/ul/li[@class='subcate-item']")
         for phone in phone_type:
             item = dict()
+            item['type'] = phone.xpath("./a/span/text()").extract_first()
             item['link'] = "https://www.vmall.com" + phone.xpath("./a/@href").extract_first()
             yield scrapy.Request(
                 item['link'],
