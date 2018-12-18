@@ -222,7 +222,7 @@ class Toplevel1:
             self.TLabel3.configure(text='''当前IP地址：%s''' % ret)
         except Exception as e:
             self.TLabel3.configure(text='''当前IP代理无效''')
-
+            print(e)
 
 if __name__ == '__main__':
     vp_start_gui()
