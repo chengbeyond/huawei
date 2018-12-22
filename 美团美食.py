@@ -70,7 +70,7 @@ class MeiTuanSpider(object):
             for i in item:
                 pot_list.append(i)
             num += 15
-        print(pot_list)
+        print(json.dumps(pot_list))
 
 
 if __name__ == "__main__":
