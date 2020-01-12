@@ -5,7 +5,7 @@ import urllib3
 import json
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-"""美团火锅店抓取"""
+"""美团火锅热门店抓取"""
 
 
 class MeiTuanSpider(object):
@@ -30,7 +30,7 @@ class MeiTuanSpider(object):
         json_str = response.content.decode()
         return json_str
 
-    # 获取火锅列表
+    # 获取火锅的列表
     def get_hot_list(self, temp):
         hot = json.loads(temp)
         hot_pots = hot["data"]["poiList"]["poiInfos"]

@@ -8,7 +8,7 @@ from pymongo import MongoClient
 import urllib3
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-"""获取代理IP，拼接成代理格式，存入数据库"""
+"""获取代理IP，拼接成代理格式，存数据库"""
 
 
 class ProxySpider(object):

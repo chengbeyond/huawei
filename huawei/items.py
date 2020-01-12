@@ -12,6 +12,7 @@ from scrapy.loader.processors import MapCompose, TakeFirst, Join
 
 
 class HuaweiItem(Item):
+    # 配置文件
     name = Field()
     description = Field()
     link = Field()

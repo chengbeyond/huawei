@@ -105,6 +105,7 @@ class HuaweiDownloaderMiddleware(object):
 
 
 class UserAgentMiddleware(object):
+    # 配置UA
     def process_request(self, request, spider):
         ua = spider.settings.get("USER_AGENTS")
         user_agent = random.choice(ua)
